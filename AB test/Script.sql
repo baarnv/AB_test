@@ -1,9 +1,3 @@
--- join user + events table
---filter for a specific timeframe(14 days)
---aggregate the data to the user level(one row - one user)
---calculate the necessary columns: user_id,variant_group, total_revenue, total_sessions,
--- and binary is_active flag (1 if the had > 0 sessions and, 0 otherwise)
-
 SELECT u.user_id, 
 	u.variant_group,
 	SUM(e.revenue_generated ) AS total_revenue, 
